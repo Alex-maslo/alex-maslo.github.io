@@ -10,27 +10,6 @@ let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
 
-// Modal Elements
-const modal = document.getElementById("swipeModal");
-const closeModalButton = document.getElementById("closeModal");
-
-function showSlide(index) {
-  const offset = -index * 100;
-  document.querySelector(
-    ".carousel-container"
-  ).style.transform = `translateX(${offset}%)`;
-}
-
-prevButton.addEventListener("click", () => {
-  currentIndex = currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
-  showSlide(currentIndex);
-});
-
-nextButton.addEventListener("click", () => {
-  currentIndex = currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
-  showSlide(currentIndex);
-});
-
 // Swipe functionality
 document.querySelector(".carousel").addEventListener("touchstart", (e) => {
   if (e.touches.length === 1) {
@@ -65,20 +44,15 @@ function handleSwipe() {
     // Vertical swipe sensitivity
     if (swipeDistanceY > 0) {
       // Swiped down
-      handleSwipeDown(); // Remove the event parameter
+      handleSwipeDown(); // Call function to refresh page
     }
   }
 }
 
 function handleSwipeDown() {
-  // Show the modal or perform any action if needed
-  modal.style.display = "flex";
+  // Refresh the page
+  window.location.reload();
 }
-
-// Close the modal when button is clicked
-closeModalButton.addEventListener("click", () => {
-  modal.style.display = "none";
-});
 
 // Initialize
 showSlide(currentIndex);
