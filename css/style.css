@@ -10,77 +10,58 @@
     "wdth" 100;
 } */
 
+/* styles.css */
+
+/* styles.css */
+
 body {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Убираем прокрутку для удобства */
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+.carousel {
+  position: relative;
+  width: 100vw; /* Полная ширина экрана */
+  height: 100vh; /* Полная высота экрана */
+  overflow: hidden;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%; /* Устанавливаем высоту контейнера */
 }
 
-header p {
-  margin: 0;
-  font-size: 1.2em;
+.carousel-slide {
+  min-width: 100vw; /* Ширина слайда - 100% от ширины экрана */
+  height: 100vh; /* Высота слайда - 100% от высоты экрана */
 }
 
-section {
-  padding: 20px;
-  margin: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-}
-
-h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 10px;
-}
-
-.experience ul,
-.education ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.experience li,
-.education li {
-  margin-bottom: 20px;
-}
-
-.experience h3,
-.education h3 {
-  margin: 0;
-  font-size: 1.5em;
-}
-
-.contact a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
+.carousel-slide img {
   width: 100%;
-  bottom: 0;
+  height: 100%;
+  object-fit: cover; /* Обрезает изображение по краям, чтобы заполнить весь контейнер */
+  display: block;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
 }
