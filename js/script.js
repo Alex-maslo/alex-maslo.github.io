@@ -5,6 +5,8 @@ const nextButton = document.querySelector(".carousel-next");
 const slides = document.querySelectorAll(".carousel-slide");
 const totalSlides = slides.length;
 let currentIndex = 0;
+let touchStartY = 0;
+let touchEndY = 0;
 
 function showSlide(index) {
   const offset = -index * 100;
@@ -24,24 +26,28 @@ nextButton.addEventListener("click", () => {
 });
 
 // Swipe functionality
-let touchStartX = 0;
-let touchEndX = 0;
-
 document.querySelector(".carousel").addEventListener("touchstart", (e) => {
-  touchStartX = e.changedTouches[0].screenX;
+  if (e.touches.length === 1) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }
 });
 
 document.querySelector(".carousel").addEventListener("touchend", (e) => {
-  touchEndX = e.changedTouches[0].screenX;
-  handleSwipe();
+  if (e.changedTouches.length === 1) {
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+    handleSwipe();
+  }
 });
 
 function handleSwipe() {
-  const swipeDistance = touchEndX - touchStartX;
+  const swipeDistanceX = touchEndX - touchStartX;
+  const swipeDistanceY = touchEndY - touchStartY;
 
-  if (Math.abs(swipeDistance) > 50) {
-    // Adjust the swipe sensitivity here
-    if (swipeDistance < 0) {
+  if (Math.abs(swipeDistanceX) > 50) {
+    // Horizontal swipe sensitivity
+    if (swipeDistanceX < 0) {
       // Swiped left
       currentIndex = currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
     } else {
@@ -49,7 +55,20 @@ function handleSwipe() {
       currentIndex = currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
     }
     showSlide(currentIndex);
+  } else if (Math.abs(swipeDistanceY) > 50) {
+    // Vertical swipe sensitivity
+    if (swipeDistanceY > 0) {
+      // Swiped down
+      handleSwipeDown();
+    }
   }
+}
+
+function handleSwipeDown() {
+  // Prevent default scroll behavior
+  event.preventDefault();
+  // Add your custom action for swipe down here
+  console.log("Swiped down!"); // Example action
 }
 
 // Initialize
