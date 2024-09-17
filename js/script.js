@@ -65,15 +65,13 @@ function handleSwipe() {
     // Vertical swipe sensitivity
     if (swipeDistanceY > 0) {
       // Swiped down
-      handleSwipeDown();
+      handleSwipeDown(); // Remove the event parameter
     }
   }
 }
 
 function handleSwipeDown() {
-  // Prevent default scroll behavior
-  event.preventDefault();
-  // Show the modal
+  // Show the modal or perform any action if needed
   modal.style.display = "flex";
 }
 
