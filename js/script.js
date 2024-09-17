@@ -5,8 +5,14 @@ const nextButton = document.querySelector(".carousel-next");
 const slides = document.querySelectorAll(".carousel-slide");
 const totalSlides = slides.length;
 let currentIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
+
+// Modal Elements
+const modal = document.getElementById("swipeModal");
+const closeModalButton = document.getElementById("closeModal");
 
 function showSlide(index) {
   const offset = -index * 100;
@@ -67,9 +73,14 @@ function handleSwipe() {
 function handleSwipeDown() {
   // Prevent default scroll behavior
   event.preventDefault();
-  // Add your custom action for swipe down here
-  console.log("Swiped down!"); // Example action
+  // Show the modal
+  modal.style.display = "flex";
 }
+
+// Close the modal when button is clicked
+closeModalButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
 // Initialize
 showSlide(currentIndex);
