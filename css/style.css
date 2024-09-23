@@ -10,6 +10,9 @@
 
 }
 
+.footer__navbar {
+}
+
 .footer__list {
     display: flex;
     justify-content: space-evenly;
@@ -21,8 +24,20 @@
 .footer__item {
     font-family: "Roboto", serif;
     font-weight: 400;
+    font-size: 24px;
+
+}
+
+.footer__link {
+    font-family: "Roboto", serif;
+    font-weight: 400;
     font-size: 28px;
     line-height: 100%;
     color: #0c1927;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    color: #3181A6;
 }
