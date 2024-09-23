@@ -1,8 +1,40 @@
-body {
-    padding: 5%;
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    /*font-weight: < weight >;*/
+    font-style: normal;
 }
 
-.responsive-img {
-    max-width: 100%; /* Ограничивает ширину до 100% от родительского контейнера */
-    height: auto; /* Сохраняет пропорции изображения */
+.navbar {
+    /*background-color: #333;*/
+    /*padding: 2%;*/
+
+}
+
+.navbar__list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    gap: 50px;
+}
+
+.navbar__item {
+    /*margin-right: 20px;*/
+
+}
+
+.navbar__link {
+    font-size: 18pt;
+    font-weight: bold;
+
+    color: #FF0000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.navbar__link:hover {
+    color: orange;
 }
