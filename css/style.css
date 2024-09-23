@@ -16,7 +16,7 @@
     margin: 0;
     display: flex;
     justify-content: center;
-    padding: 20px 0 20px 0;
+    padding: 30px 0;
     gap: 50px;
 }
 
@@ -37,4 +37,55 @@
 
 .navbar__link:hover {
     color: orange;
+}
+
+
+.content__figure {
+    width: 100%;
+
+}
+
+.content__image {
+    width: 100%;
+    height: auto;
+}
+
+.content__title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #373737;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Смещение по X, Y, размытие и цвет тени */
+}
+
+.content__paragraph {
+    padding: 0 70px;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.content__button-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.content__button {
+    background: #FF0000;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 20px;
+    border-radius: 10px; /* Радиус закругления углов */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.footer__paragraph {
+    text-align: right;
+    color: #373737;
+    padding: 0 70px;
+    font-size: 16pt;
+    font-weight: bold;
 }
