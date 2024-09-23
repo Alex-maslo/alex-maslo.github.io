@@ -1,92 +1,28 @@
 * {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    /*font-weight: < weight >;*/
+    font-family: "Roboto", serif;
     font-style: normal;
 }
 
-.navbar {
-    /*background-color: #333;*/
-    /*padding: 2%;*/
+.footer {
+    padding: 15px;
+    margin: 20px;
+    background: rgba(99, 105, 110, 0.48);
 
 }
 
-.navbar__list {
+.footer__list {
+    display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
+    padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    padding: 3% 0;
-    gap: 2%;
 }
 
-.navbar__item {
-    /*margin-right: 20px;*/
-
-}
-
-.navbar__link {
-    font-size: 100%;
-    font-weight: bold;
-
-    color: #FF0000;
-    text-decoration: none;
-    text-transform: uppercase;
-
-}
-
-.navbar__link:hover {
-    color: orange;
-}
-
-
-.content__figure {
-    width: 100%;
-
-}
-
-.content__image {
-    width: 100%;
-    height: auto;
-}
-
-.content__title {
-    font-size: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    color: #373737;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Смещение по X, Y, размытие и цвет тени */
-}
-
-.content__paragraph {
-    padding: 0 5%;
-    letter-spacing: 2px;
-    line-height: 24px;
-    text-align: center;
-}
-
-.content__button-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-}
-
-.content__button {
-    background: #FF0000;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12pt;
-    padding: 20px;
-    border-radius: 10px; /* Радиус закругления углов */
-    cursor: pointer; /* Указатель при наведении */
-}
-
-.footer__paragraph {
-    text-align: right;
-    color: #373737;
-    padding: 0 5%;
-    font-size: 16pt;
-    font-weight: bold;
+.footer__item {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #0c1927;
+    cursor: pointer;
 }
