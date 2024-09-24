@@ -1,97 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-            name="viewport"
-    />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport"
+  />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <title>Document</title>
 
-    <link href="./css/normalize.css" rel="stylesheet"/>
-    <link href="./css/style.css" rel="stylesheet"/>
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 
-    <!--  fonts  -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet"
-    />
-    <!--    -->
+  <!--  fonts  -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <!--    -->
 </head>
+
+
 <body>
 <div class="wrapper">
-    <header>
-        <div class="header__logo"></div>
-        Ramda.js
-        <nav>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <div class="navbar__logo-logo">
+          <svg width="53" height="47" viewBox="0 0 53 47" fill="none" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="53" height="47" fill="url(#pattern0_3578_66)" />
+            <defs>
+              <pattern id="pattern0_3578_66" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_3578_66" transform="matrix(0.0217391 0 0 0.0245143 0 -0.0393154)" />
+              </pattern>
+              <image id="image0_3578_66" width="46" height="44"
+                     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAsCAYAAAAacYo8AAAEwElEQVRYhdVYXYxdUxT+1p3LtNNWfzK00holbefH30Qlxl8UjQfxFxUPRCKePHggXkhfeCGa1IOXiofhQUJCgkSGCjrET0NSU4kgokYijaI6VFId6pN17zrXsnv22XvmzARfcnP32ftbe39nn7XXXnujDkj2kTwR7fK6qq5ILiK5yspn1hoYQKOm/bkACsE3Jrj9AIasfG3NcWsLVzEbrHw1yYUV3EHjKzaSPLXOwHWFDznhA65cBv+S+hK13KWucBXST3IxgNMArK/ghi9ZS3izjrHzWS8oBp3xHpKrASz514ST1MFX2Ez3WfVa196KNiIybVXKU5sz3POskeUqJC8sqe4qqWsafyWAtwC8SbLXtTfcZB03aSRPJrkmR1Ouj9+QydPBzwPwIYBLAFwK4COSZ2WaDybcrYNc4ZtJnpTB0y/zvnMdmPt8AGBRhv2AWzeVyBU+kDkTyumx8kFXv8S5hlTY+1hfT7iLAoMRigraEtTts5nbWsJ/rGK4gYpxZgaSV7KNR4IXWsY4rjCOkHw3wnq6ZJImSe7PEdgwgy777y7hFP4abtGxOPyNiOxCOxQSwGiEdznJ0C36SsYpJqDQ2AXnKpvs/6JEvlF0dB2A8UjzZPD8dYSni3Y3yc2uLub/p7tkrsVvaOwEMGKVZ1ctDnvz+wG8ZH6fA1ZwlgF4jeRdiX76ne9frJqbVrHOEX4EMFFirF/iGQC3urrDtjiTXynAQdt1xTayHYlYrxoXuPJg01ZyIXwoCGMetwTPtI1J+3h9BqJ/AXABgJsAbHf1d1fYDDjhrdBczHiR1RUz7rE00tmuYhFq5LBdstVxEDFWBXajIqLR43EADwDoDdq1v/Ui8mUgfKEtzA0tzSTHLDyttv+9roM7SE6nwpmWK0JjiHuc3USE85OGYcc7QHJKj3zWPtZwO10x60v1zUhuA/AUgBNi38+hLIzWwXIAO92iPcW+fJF29JSltd0WNfy58HOLsT0lfEQW535bgAtK2gqEbjgF4JClvs3KRUty3KZ/U+Sz3We8tSQPZ7rDnfg7Td2TabOP5HILuU9EOMP2P+5zlfMjs/Ii2rvgZCRMhvhCREbN5gcA2zJsFDtF5JDtti9EOOcUBS98ezkXf7rysQwB3yWeYzjq6v+IcDoBoe5heb6wONJvR2/OmXNE/dvKK+ZR7BpdZ1YeTpFzhD9bX1MWtpTk9VHUvZ4og34hnyFWhcNZI8fH3wNwFYCHMgfptjS0+K3MtDtm+co1GpmSbBfHYxh23I8zY/Js8Jwb5+aE/XjOjE+58s+Zs6c8Tbw+zeQjCKNhoncc5iMcPqwZoYhcJiJ6MNkI4KsZ9pHMj+Za+JMislVEfisqRGSPXkED6NRlIHkHkxNVNO0t7v+qrpEVj5ZViojmIc8DuL3C9jYXx2NngA5yhOfecxxRgRXtKX/vLTtUxDCXrjKdaPe5SG3kCP8MwIMAXp3Dcctw1G659PbrQIqcchUNUSMiogdcja8vA7h+noTfKyI7bJxXAOytIqdm/J1CtGFsjkSW4Y2iTkQ+AfB9FTkl/EjwPKd+GuD3xNj/wH81H0/ifytcF2fVOVJP9x66WN+OcH9NjPVtha0i3Fl3l1ygtgFM/AUDnFlFJu1IlgAAAABJRU5ErkJggg==" />
+            </defs>
+          </svg>
 
-    <main class="content">
-        <div class="content__frame"></div>
-        <div class="content__frame">
-            <figure>
-                <img
-                        alt=""
-                        height="381"
-                        src="./images/top1-img 1.png"
-                        width="320"
-                />
-            </figure>
-
-            <p class="content__frame-paragraph">
-                Lorem ipsum — класичний варіант умовного беззмістовного тексту, що
-                вставляється в макет сторінки (у сленгу дизайнерів такий текст
-                називається «рибою»). Lorem ipsum — це перекручений уривок з
-                філософського трактату Цицерона «Про межі добра і зла», написаного в
-                45 році до нашої ери латиною. З точки зору зручності сприйняття
-                друкованих текстів Lorem ipsum показує, що латинська графіка
-                найслушніше пристосовується для написання саме творів латинською
-                мовою (тут враховується частота вживання символів з виносними
-                елементами, таких як g, l, h, p).
-            </p>
-            <p class="content__frame-paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-            </p>
         </div>
-    </main>
+        <div class="navbar__logo-text">
+          <span>Milan</span></div>
+        <span>Holidays</span>
 
-    <footer class="footer">
-        <nav class="footer__navbar">
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a class="footer__link" href="#">Ramda</a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__link" href="#">Why Ramda?</a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__link" href="#">What's Different?</a>
-                </li>
-                <li class="footer__item">
-                    <a class="footer__link" href="#">Introductions</a>
-                </li>
-                <li class="footer__item">Copyright © 2018</li>
-            </ul>
-        </nav>
-    </footer>
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Контент страницы -->
+  </main>
+
+  <footer class="footer">
+    <!-- Информация для футера -->
+  </footer>
 </div>
 </body>
+
 </html>
