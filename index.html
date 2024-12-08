@@ -7,19 +7,47 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <title>js-exam</title>
 
-    <script src="script.js" defer></script>
+    <!-- Підключення favicon -->
+    <link rel="icon" href="img/discover_12436434.svg" type="image/svg+xml" />
+
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-tablet.css" />
+    <link rel="stylesheet" href="css/style-mobile.css" />
+    <!-- Підключення script -->
+    <script src="script/script.js" defer></script>
   </head>
+
   <body>
-    <header>
-      <img src="img/png/fon-header.png" alt="img" />
-    </header>
-    <main class="main"></main>
-    <footer class="footer">
-      <a href="tel:+1234567890" class="call-button">Позвонить</a>
-    </footer>
+    <div id="container">
+      <div class="body">
+        <h1 class="body__title">Організатор Даних</h1>
+        <p class="body__text">Пара Ім'я/Значення</p>
+        <div class="body__content-wrapper first">
+          <label>
+            <input
+              class="body__input"
+              id="input-pair"
+              type="text"
+              placeholder="Ім'я=Значення"
+          /></label>
+          <button id="btn-add">Додати</button>
+        </div>
+
+        <p class="body__text">Список пар Ім'я/Значення</p>
+        <div class="body__content-wrapper second">
+          <ul id="pair-list" class="body__list"></ul>
+          <div class="body__button">
+            <button id="btn-sort-by-name">Сортувати за ім'ям</button>
+            <button id="btn-sort-by-value">Сортувати за значенням</button>
+            <button id="btn-delete-selected">Видалити виділене</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

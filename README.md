@@ -1,1 +1,1 @@
-# exam-html-css
+# js-exam
