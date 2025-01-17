@@ -1,4 +1,4 @@
-export const getData = async () => {
-  const response = await fetch(import.meta.env.VITE_BASE_URL);
+export const getData = async (path: string) => {
+  const response = await fetch(`${import.meta.env.VITE_DUMMY_BASE}${path}`);
   return response.json();
 };
