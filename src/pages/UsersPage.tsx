@@ -12,7 +12,7 @@ const UsersPage = () => {
     <div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-cols-1 gap-4 p-3">
         {users.map((user) => (
-          <User user={user} />
+          <User key={user.id} user={user} />
         ))}
       </div>
     </div>
